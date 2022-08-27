@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --light_cyan: hsl(193, 38%, 86%);
+    --neon_green: hsl(150, 100%, 66%);
+    --grayish_blue: hsl(217, 19%, 38%);
+    --dark_grayish_blue: hsl(217, 19%, 24%);
+    --dark_blue: hsl(218, 23%, 16%);
+}
+
+body,
+html {
+    position: relative;
+    overflow-y: hidden;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--dark_blue);
+    color: var(--light_cyan);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.quote_conatiner {
+    padding: 40px;
+    background: var(--dark_grayish_blue);
+    border-radius: 10px;
+    text-align: center;
+    width: 600px;
+    min-height: 200px;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.quote_conatiner .number {
+    color: var(--neon_green);
+    letter-spacing: 1px;
+    margin: 20px 0;
+    margin-top: 0;
+    font-size: 14px;
+}
+
+.quote_conatiner .quote {
+    font-size: 25px;
+    color: var(--light_cyan);
+    margin: 10px 0;
+}
+
+.quote_conatiner .quote span {
+    color: var(--neon_green);
+    font-size: 20px;
+}
+
+.quote_conatiner .img {
+    margin: 20px 0;
+}
+
+.quote_conatiner .img .mobile {
+    display: none;
+}
+
+.quote_conatiner .random {
+    background: none;
+    outline: none;
+    border: 0;
+    width: 50px;
+    height: 50px;
+    background-color: var(--neon_green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.2s all;
+}
+
+.quote_conatiner .random img {
+    width: 23px;
+    height: 23px;
+}
+
+.quote_conatiner .random:hover {
+    box-shadow: rgba(82, 255, 169, 0.568) 0px 7px 29px 0px;
+}
+
+@media (max-width: 771px) {
+    .quote_conatiner {
+        max-width: 335px;
+        padding: 20px;
+        padding-bottom: 30px;
+        min-height: 200px;
+    }
+    .quote_conatiner .quote {
+        font-size: 20px;
+    }
+    .quote_conatiner .img {
+        width: 100%;
+    }
+    .quote_conatiner .img .mobile {
+        display: block;
+    }
+    .quote_conatiner .img .desk {
+        display: none;
+    }
+}
